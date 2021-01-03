@@ -1,0 +1,55 @@
+/**index.wxss**/
+.search {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  padding-top: 40rpx;
+  padding-bottom: 10rpx;
+  width: 100%;
+  background: #ffffff;
+}
+
+.logo {
+  margin-top: 12rpx;
+  width: 160rpx;
+  height: 64rpx;
+}
+
+.search-input {
+  flex: 1;
+  margin-top: 12rpx;
+  margin-right: 210rpx;
+  width: 240rpx;
+  height: 64rpx;
+  background: #f7f7f7;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 32rpx;
+  color: #c2bdbd;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.swiper {
+  margin-top: 130rpx;
+  width: 750rpx; 
+}
+
+.autoplay-img {
+  width: 750rpx;
+}
+
+.category-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 160rpx;
+}
+
+.category-nav image {
+  width: 128rpx;
+  height: 140rpx;
+}

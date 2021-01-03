@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头部搜索框 -->
+  <view class="search">
+    <image mode="aspectFit" class="logo" src="/assets/icons/songtao.png"></image>
+    <view class="search-input" bindtap="bindViewTap">
+      搜索商品
+    </view>
+  </view>
+  <!-- 轮播图区域 -->
+  <view class="swiper">
+      <swiper 
+        wx:if="{{autoImgList.length > 0 && autoImgList[0].image_src}}" 
+        indicator-dots="{{true}}" 
+        circular="{{true}}" 
+        autoplay="{{true}}" 
+        interval="{{2000}}" 
+        duration="{{500}}">
+        <swiper-item wx:for="{{autoImgList}}" wx:key="index">
+          <image 
+          mode="widthFix" 
+          class="autoplay-img" 
+          src="{{item.image_src}}"  
+          data-navurl="{{item.navigator_url}}"
+          bindtap="autoplayHandler"
+          >
+          </image>
+        </swiper-item>
+      </swiper>
+      <text wx:else>图片资源获取失败</text>
+  </view>
+  <!-- 分类导航栏 -->
+  <view class="category-nav">
+    <image 
+      wx:for="{{categoryList}}" 
+      wx:key="index" 
+      src="{{item.image_src}}" 
+      data-navurl="{{item.navigator_url ? item.navigator_url : 'null'}}" 
+      bindtap="categoryHandler" 
+    >
+    </image>
+  </view>
+</view>
